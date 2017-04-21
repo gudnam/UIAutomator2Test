@@ -26,6 +26,9 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
+import static io.gudnam.uiautomatortest.Validator.isEmailValid;
+import static io.gudnam.uiautomatortest.Validator.isPasswordValid;
+
 /**
  * A login screen that offers login via email/password.
  */
@@ -137,15 +140,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             mAuthTask.execute((Void) null);
         }
     }
-    private boolean isEmailValid(String email) {
-        //TODO: Replace this with your own logic
-        return email.contains("@");
-    }
 
-    private boolean isPasswordValid(String password) {
-        //TODO: Replace this with your own logic
-        return password.length() > 4;
-    }
 
     /**
      * Shows the progress UI and hides the login form.
