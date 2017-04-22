@@ -38,7 +38,7 @@ jacoco {
     reportsDir = file("${buildDir}/reports")
 }
 
-task javaCodeCoverage(type: JacocoReport, dependsOn: 'testDevDebugUnitTest') {
+task javaCodeCoverage(type: JacocoReport, dependsOn: 'testDebugUnitTest') {
     group = "Reporting"
     description = "Generate Jacoco coverage reports"
 
